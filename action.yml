@@ -1,0 +1,5 @@
+name: 'pytest unit test'
+description: 'run pytest against source code'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
