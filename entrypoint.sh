@@ -5,4 +5,6 @@ python -m venv ./venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-pytest --junitxml=junit.xml --cov-report html --cov-report xml --cov=src --cov-report term-missing test
+mkdir -p artifacts/pytest
+
+pytest --junitxml=artifacts/pytest/junit.xml --cov-report html:artifacts/pytest/ --cov-report xml:artifacts/pytest/coverage.xml --cov=src test
